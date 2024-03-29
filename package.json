@@ -1,0 +1,19 @@
+{
+  "name": "villaagency",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "serve": "serve -s dist -l 3000",
+    "build": "vite build",
+    "build-and-report": "npm run build && npm run serve & lighthouse http://localhost:3000 --output html --output-path=./lighthouse-report.html && kill $!"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "vite": "^5.2.7"
+  }
+}
