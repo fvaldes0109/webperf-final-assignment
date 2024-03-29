@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import fs from 'fs';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 const moduleToJs = () => {
@@ -24,6 +25,11 @@ export default defineConfig({
   plugins: [
     moduleToJs(),
     noAttr(),
+    ViteImageOptimizer({
+      webp: {
+        quality: 70,
+      },
+    }),
   ],
   base: './',
   build: {
