@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import path from 'path';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 const moduleToJs = () => {
   return {
